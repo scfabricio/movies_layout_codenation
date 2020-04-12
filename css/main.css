@@ -1,0 +1,393 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	/* a cada 1rem será considerado 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	height: 90vh;
+	
+	background-image: url('../img/capa-madmax2.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header:after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+	content: "";
+	height: 90vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+header>div {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px 0;
+
+	margin: 0 20%;
+	z-index: 2;
+}
+
+header .image-bg-featured {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	
+	position: fixed;
+	top: 0;
+	left: 0;	
+
+	z-index: -10;	
+}
+
+header .image-bg-featured img {
+	width: 100vw;
+	min-width: 100%;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+}
+
+header .header-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: space-between;	
+}
+
+header nav ul li {
+	margin: 0 25px;
+}
+
+header nav ul li a {
+	color: white;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+header nav ul li a:hover {
+	color: #bc9a1d !important;
+}
+
+.user-info-area {
+	display: flex;
+	align-items: center;
+}
+
+.user-info-area img {
+	width: 45px;
+	height: 45px;
+
+	border-radius: 50%;
+}
+
+.user-info-area span {
+	color: white;
+
+	margin-left: 20px;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.featured {
+	padding-top: 69px;
+}
+
+.featured h1 {
+	color: white;
+
+	font-size: 6.5rem;
+	font-weight: bold;
+	line-height: 8rem;
+	margin-bottom: 20px;
+}
+
+.featured ul {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.featured ul li + li {
+	margin-left: 15px;
+}
+
+.featured ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: white;
+	font-size: 1.3rem;
+}
+
+.featured ul li a:hover {
+	color: #bc9a1d !important;
+}
+
+.featured .btn-action {
+	background-color: #e4bb23;
+	border-radius: 40px;
+	padding: 15px 50px;
+	color: #000;
+	font-size: 1.5rem;
+	text-decoration: none;
+	position: relative;
+}
+
+.featured .btn-action:hover {
+	opacity: .9;
+}
+
+.featured .btn-action i {
+	font-size: 1.5em;
+	position: absolute;
+	right: 15px;
+	top: 12px;
+}
+
+.featured div {
+	padding: 20px 0;
+}
+
+.featured div p {
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.color-secondary {
+	color: #bc9a1d !important;
+}
+
+main {
+	background-color: #f2f2f2;
+	padding: 0 20%;	
+}
+
+main nav ul {
+	display: flex;
+	justify-content: center;	
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	height: 10vh;
+}
+
+main nav ul li {
+	height: 100%;	
+	padding: 0 10px;
+}
+
+main nav ul li + li { 
+	margin-left: 20px;
+}
+
+main nav ul a {
+	height: 100%;
+	
+	display: flex;
+	align-items: center;
+
+	color: #e4bb23;
+	font-size: 1.3rem;
+	font-weight: bold;
+	transition: 
+		box-shadow .2s;		
+}
+
+main nav ul a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+main .list-movies {
+	padding: 40px 0;
+
+	display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 20px;
+}
+
+.movie-card {
+	background-color: white;
+	border-radius: 5px;	
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card figure {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.movie-card figure img {
+	height: auto;
+	width: 100%;
+	
+	object-fit: cover;
+
+	border-radius: 5px 5px 0 0;
+}
+
+.movie-card figure div {
+	position: absolute;	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: rgba(0, 0, 0, .5);
+
+	opacity: 0;
+
+	z-index: 10;
+
+	transition: opacity .2s;
+}
+
+.movie-card figure div:hover {
+	opacity: 1;
+}
+
+.movie-card figure div h1 {
+	color: #e4bb23;
+	font-size: 2rem;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.movie-card figure div i {
+	font-size: 4rem;
+	color: white;
+}
+
+.movie-card figure div i:hover {
+	color: #e4bb23;
+}
+
+.movie-card .movie-info {
+	padding: 0 10px;
+}
+
+.movie-card .movie-info p a {
+	font-size: 1.2rem;
+	color: #bc9a1d;
+	text-decoration: none;
+}
+
+.movie-card .movie-info p a:hover {
+	text-decoration: underline;
+}
+
+.movie-card .movie-info div {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.movie-card .movie-info div * {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.movie-card .movie-info div i {	
+	color: #ccc;
+	cursor: pointer;
+}
+
+.movie-card .movie-info div i:hover {
+	color: red;
+}
+
+footer {
+	background-color: white;
+	padding: 10px 20%;	
+
+	display: flex;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+footer ul li + li {
+	margin-left: 40px;
+}
+
+footer ul li a {
+	height: 100%;
+	font-size: 2.6rem;
+	font-weight: bold;
+
+	color: #ccc;
+	cursor: pointer;
+}
+
+.icone-twitter a:hover {
+	color: #55acee;
+}
+
+.icone-facebook a:hover {
+	color: #3b5998;
+}
+
+.icone-instagram a:hover {
+	color: #e95950;
+}
+
+@media (max-width: 1024px) {
+	html {
+		font-size: 50%;
+	}
+
+	header > div {
+    width: 90%;
+    margin: 0 5%;
+	}
+
+	.featured h1 {    
+		margin: 0;
+	}
+}
